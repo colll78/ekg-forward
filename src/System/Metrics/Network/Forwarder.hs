@@ -1,6 +1,5 @@
 {-# LANGUAGE BlockArguments #-}
 {-# LANGUAGE DataKinds #-}
-{-# LANGUAGE PackageImports #-}
 {-# LANGUAGE RecordWildCards #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
@@ -15,7 +14,7 @@ module System.Metrics.Network.Forwarder
 
 import           Codec.CBOR.Term (Term)
 import qualified Codec.Serialise as CBOR
-import           "contra-tracer" Control.Tracer (nullTracer)
+import           Hermod.Tracing.API.Tracer (nullTracer)
 import qualified Data.ByteString.Lazy as LBS
 import qualified Data.Text as T
 import           Data.Void (Void, absurd)

@@ -16,7 +16,7 @@ import           Control.Exception (finally)
 import           Control.Concurrent (threadDelay)
 import           Control.Concurrent.Async (wait)
 import           Control.Concurrent.STM.TVar (TVar, readTVarIO)
-import           Control.Tracer (nullTracer)
+import           Hermod.Tracing.API.Tracer (nullTracer)
 import qualified Data.ByteString.Lazy as LBS
 import qualified Data.Text as T
 import           Data.Time.Clock (NominalDiffTime)

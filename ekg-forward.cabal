@@ -59,8 +59,8 @@ library
   build-depends:         async
                        , bytestring
                        , cborg
-                       , contra-tracer
                        , ekg-core
+                       , hermod-tracing-api:public ^>=1.1
                        , io-classes >= 1.4.1
                        , network
                        , network-mux
@@ -77,9 +77,9 @@ executable demo-forwarder
   hs-source-dirs:      demo
   main-is:             forwarder.hs
   build-depends:         base
-                       , contra-tracer
                        , ekg-core
                        , ekg-forward
+                       , hermod-tracing-api:public
                        , text
                        , time
 
@@ -93,9 +93,9 @@ executable demo-acceptor
   hs-source-dirs:      demo
   main-is:             acceptor.hs
   build-depends:         base
-                       , contra-tracer
                        , ekg-core
                        , ekg-forward
+                       , hermod-tracing-api:public
                        , stm
                        , text
                        , time
@@ -116,9 +116,9 @@ test-suite ekg-forward-test
                        Test.GetUpdatedMetrics
                        Test.MkConfig
   build-depends:         base
-                       , contra-tracer
                        , ekg-core
                        , ekg-forward
+                       , hermod-tracing-api:public
                        , hspec
                        , stm
                        , time

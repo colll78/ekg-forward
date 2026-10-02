@@ -2,7 +2,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 import           Control.Concurrent
-import           Control.Tracer (contramap, stdoutTracer)
+import           Hermod.Tracing.API.Tracer (contramap, stdoutTracer)
 import           Data.Fixed (Pico)
 import           Data.Text (pack)
 import           Data.Time.Clock (secondsToNominalDiffTime)

@@ -7,7 +7,7 @@ module System.Metrics.Configuration
   ) where
 
 import           Control.Concurrent.STM.TVar (TVar)
-import           Control.Tracer (Tracer)
+import           Hermod.Tracing.API.Tracer (Tracer)
 import           Data.Text (Text)
 import           Data.Time.Clock (NominalDiffTime)
 import           Data.Word (Word16)
@@ -27,7 +27,7 @@ data HowToConnect
 -- | Acceptor configuration.
 data AcceptorConfiguration = AcceptorConfiguration
   { -- | The tracer that will be used by the acceptor in its network layer.
-    -- For more info about tracers please read its [documentation](https://github.com/input-output-hk/iohk-monitoring-framework/tree/master/contra-tracer).
+    -- It is a hermod trace (@Hermod.Tracing.API.Tracer@ from @hermod-tracing-api@).
     acceptorTracer    :: !(Tracer IO (TraceSendRecv (EKGForward Request Response)))
     -- | The endpoint that will be used to listen to the forwarder.
   , forwarderEndpoint :: !HowToConnect

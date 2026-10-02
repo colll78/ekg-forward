@@ -4,7 +4,7 @@ module Test.MkConfig
   ) where
 
 import           Control.Concurrent.STM.TVar (TVar)
-import           Control.Tracer (nullTracer)
+import           Hermod.Tracing.API.Tracer (nullTracer)
 import           Data.Time.Clock (secondsToNominalDiffTime)
 
 import           System.Metrics.Configuration (AcceptorConfiguration (..),

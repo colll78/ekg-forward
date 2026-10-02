@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+* Use `hermod-tracing-api` instead of `contra-tracer`: `acceptorTracer` and
+  `forwarderTracer` are now hermod `Trace`s (`Hermod.Tracing.API.Tracer`), the
+  type `ouroboros-network` takes once it uses hermod tracing. Breaking change.
+
 ## 1.3 - Jul 2026
 
 * Updated to `ouroboros-network-1.2`.
